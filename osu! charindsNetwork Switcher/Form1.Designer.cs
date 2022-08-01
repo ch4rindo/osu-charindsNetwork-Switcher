@@ -98,7 +98,7 @@ namespace osu__charindsNetwork_Switcher
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "osu! charindsNetwork Switcher v1.0.2";
+            this.Text = "osu! charindsNetwork Switcher v1.0.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
