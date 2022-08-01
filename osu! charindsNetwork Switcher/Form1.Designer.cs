@@ -87,7 +87,7 @@ namespace osu__charindsNetwork_Switcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(397, 151);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.serverIp);
@@ -99,7 +99,7 @@ namespace osu__charindsNetwork_Switcher
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "osu! charindsNetwork Switcher v1.0.1";
+            this.Text = "osu! charindsNetwork Switcher v2.0.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

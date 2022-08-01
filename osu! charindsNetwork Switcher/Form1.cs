@@ -3,6 +3,8 @@ using System.Text;
 using System.IO;
 using System.Windows.Forms;
 using System.Net;
+using System.Diagnostics;
+using System.Management;
 
 namespace osu__charindsNetwork_Switcher
 {
@@ -18,6 +20,7 @@ namespace osu__charindsNetwork_Switcher
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Process ps = GetOsuProcess();
             remove_hosts_data();
             bool r = true;
             if (checkBox1.Checked) 
@@ -29,10 +32,62 @@ namespace osu__charindsNetwork_Switcher
                 }
             }
 
+            if (ps != null)
+            {
+                ps.Kill();
+                ProcessStartInfo processStartInfo = new ProcessStartInfo(ProcessExecutablePath(ps));
+                Process.Start(processStartInfo);
+            }
+
             if (r)
             {
-                MessageBox.Show("サーバーの変更に成功しました。\r\nosuを再起動してください", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("サーバーの変更に成功しました", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
+        }
+
+        private Process? GetOsuProcess()
+        {
+            Process[] ps = Process.GetProcessesByName("osu!");
+            foreach (Process p in ps)
+            {
+                //IDとメインウィンドウのキャプションを出力する
+                Console.WriteLine("{0}/{1}", p.Id, p.MainWindowTitle);
+            }
+
+            if (ps.Length == 0)
+            {
+                return null;
+            }
+            else
+            {
+                return ps[0];
+            }
+        }
+
+        private string ProcessExecutablePath(Process process)
+        {
+            try
+            {
+                return process.MainModule.FileName;
+            }
+            catch
+            {
+                string query = "SELECT ExecutablePath, ProcessID FROM Win32_Process";
+                ManagementObjectSearcher searcher = new ManagementObjectSearcher(query);
+
+                foreach (ManagementObject item in searcher.Get())
+                {
+                    object id = item["ProcessID"];
+                    object path = item["ExecutablePath"];
+
+                    if (path != null && id.ToString() == process.Id.ToString())
+                    {
+                        return path.ToString();
+                    }
+                }
+            }
+
+            return "";
         }
 
         private bool add_hosts_data()
@@ -76,11 +131,6 @@ namespace osu__charindsNetwork_Switcher
             s += "\r\n" + host + " ce.ppy.sh";
             s += "\r\n" + host + " a.ppy.sh";
             s += "\r\n" + host + " i.ppy.sh";
-            s += "\r\n" + host + " i-need-to.click";
-            s += "\r\n" + host + " c.i-need-to.click";
-            s += "\r\n" + host + " i.i-need-to.click";
-            s += "\r\n" + host + " a.i-need-to.click";
-            s += "\r\n" + host + " old.i-need-to.click";
 
             //Shift JISで書き込む
             //書き込むファイルが既に存在している場合は、上書きする
@@ -128,11 +178,6 @@ namespace osu__charindsNetwork_Switcher
             s = s.Replace("\r\n"+host+" ce.ppy.sh", "");
             s = s.Replace("\r\n"+host+" a.ppy.sh", "");
             s = s.Replace("\r\n"+host+" i.ppy.sh", "");
-            s = s.Replace("\r\n" + host + " i-need-to.click", "");
-            s = s.Replace("\r\n" + host + " c.i-need-to.click", "");
-            s = s.Replace("\r\n" + host + " i.i-need-to.click", "");
-            s = s.Replace("\r\n" + host + " a.i-need-to.click", "");
-            s = s.Replace("\r\n" + host + " old.i-need-to.click", "");
             */
 
             //Shift JISで書き込む
