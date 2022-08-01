@@ -44,7 +44,7 @@ namespace osu__charindsNetwork_Switcher
             this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button1.Location = new System.Drawing.Point(12, 86);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(336, 53);
+            this.button1.Size = new System.Drawing.Size(373, 53);
             this.button1.TabIndex = 0;
             this.button1.Text = "Apply settings";
             this.button1.UseVisualStyleBackColor = false;
@@ -66,7 +66,7 @@ namespace osu__charindsNetwork_Switcher
             this.serverIp.Location = new System.Drawing.Point(137, 23);
             this.serverIp.MaxLength = 15;
             this.serverIp.Name = "serverIp";
-            this.serverIp.Size = new System.Drawing.Size(211, 19);
+            this.serverIp.Size = new System.Drawing.Size(248, 19);
             this.serverIp.TabIndex = 4;
             this.serverIp.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -75,7 +75,7 @@ namespace osu__charindsNetwork_Switcher
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox1.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox1.Location = new System.Drawing.Point(53, 51);
+            this.checkBox1.Location = new System.Drawing.Point(89, 51);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(296, 24);
             this.checkBox1.TabIndex = 5;
@@ -88,7 +88,7 @@ namespace osu__charindsNetwork_Switcher
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(361, 151);
+            this.ClientSize = new System.Drawing.Size(397, 151);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.serverIp);
             this.Controls.Add(this.label1);
@@ -98,6 +98,7 @@ namespace osu__charindsNetwork_Switcher
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "osu! charindsNetwork Switcher v1.0.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
