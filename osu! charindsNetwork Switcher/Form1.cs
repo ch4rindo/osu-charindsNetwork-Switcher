@@ -4,7 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Net;
 
-namespace osu__YonagiNetwork_Switcher
+namespace osu__charindsNetwork_Switcher
 {
     public partial class Form1 : Form
     {

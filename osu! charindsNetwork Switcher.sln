@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osu! YonagiNetwork Switcher", "osu! YonagiNetwork Switcher\osu! YonagiNetwork Switcher.csproj", "{C45599AD-9046-4EB6-AB58-DA31D72B2CC3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "osu! charindsNetwork Switcher", "osu! charindsNetwork Switcher\osu! charindsNetwork Switcher.csproj", "{C45599AD-9046-4EB6-AB58-DA31D72B2CC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

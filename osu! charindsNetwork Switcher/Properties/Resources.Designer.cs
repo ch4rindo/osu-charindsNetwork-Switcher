@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace osu__YonagiNetwork_Switcher.Properties
+namespace osu__charindsNetwork_Switcher.Properties
 {
     /// <summary>
     ///   ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
