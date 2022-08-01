@@ -99,7 +99,7 @@ namespace osu__charindsNetwork_Switcher
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "osu! charindsNetwork Switcher v1.0.0";
+            this.Text = "osu! charindsNetwork Switcher v1.0.1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
