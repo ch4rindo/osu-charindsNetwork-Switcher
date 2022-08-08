@@ -32,11 +32,24 @@ namespace osu__charindsNetwork_Switcher
                 }
             }
 
+            if (checkBox2.Checked)
+            {
+
+            }
+
             if (ps != null)
             {
                 ps.Kill();
-                ProcessStartInfo processStartInfo = new ProcessStartInfo(ProcessExecutablePath(ps));
-                Process.Start(processStartInfo);
+                if (checkBox2.Checked)
+                {
+                    ProcessStartInfo processStartInfo = new ProcessStartInfo(ProcessExecutablePath(ps), "-devserver charinds.com");
+                    Process.Start(processStartInfo);
+                }
+                else
+                {
+                    ProcessStartInfo processStartInfo = new ProcessStartInfo(ProcessExecutablePath(ps));
+                    Process.Start(processStartInfo);
+                }
             }
 
             if (r)
@@ -207,7 +220,18 @@ namespace osu__charindsNetwork_Switcher
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkBox1.Checked)
+            {
+                checkBox2.Checked = false;
+            }
+        }
 
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                checkBox1.Checked = false;
+            }
         }
     }
 }
