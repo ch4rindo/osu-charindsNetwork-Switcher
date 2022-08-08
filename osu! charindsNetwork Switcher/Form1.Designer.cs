@@ -34,6 +34,7 @@ namespace osu__charindsNetwork_Switcher
             this.label1 = new System.Windows.Forms.Label();
             this.serverIp = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
@@ -42,7 +43,7 @@ namespace osu__charindsNetwork_Switcher
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button1.Location = new System.Drawing.Point(12, 86);
+            this.button1.Location = new System.Drawing.Point(12, 105);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(373, 53);
             this.button1.TabIndex = 0;
@@ -75,20 +76,35 @@ namespace osu__charindsNetwork_Switcher
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox1.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.checkBox1.Location = new System.Drawing.Point(89, 51);
+            this.checkBox1.Location = new System.Drawing.Point(64, 75);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(296, 24);
+            this.checkBox1.Size = new System.Drawing.Size(248, 24);
             this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "上記のIPにサーバーを変更する";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox2.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.checkBox2.Location = new System.Drawing.Point(64, 51);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(262, 27);
+            this.checkBox2.TabIndex = 6;
+            this.checkBox2.Text = "charindsNetworkに接続 (推奨)";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(397, 151);
+            this.ClientSize = new System.Drawing.Size(397, 170);
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.serverIp);
             this.Controls.Add(this.label1);
@@ -99,7 +115,7 @@ namespace osu__charindsNetwork_Switcher
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "osu! charindsNetwork Switcher v2.0.0";
+            this.Text = "osu! charindsNetwork Switcher v3.0.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -112,6 +128,7 @@ namespace osu__charindsNetwork_Switcher
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox serverIp;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 
