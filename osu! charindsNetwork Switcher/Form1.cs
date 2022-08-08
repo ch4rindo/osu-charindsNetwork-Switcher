@@ -2,9 +2,9 @@
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
-using System.Net;
 using System.Diagnostics;
 using System.Management;
+using System.Text.RegularExpressions;
 
 namespace osu__charindsNetwork_Switcher
 {
@@ -113,9 +113,7 @@ namespace osu__charindsNetwork_Switcher
 
             // 文字列置換
             string host = serverIp.Text;
-            IPAddress ipaddr;
-            bool ret = IPAddress.TryParse(host, out ipaddr);
-            if (!ret)
+            if(!Regex.IsMatch(host, @"\d{1,3}(\.\d{1,3}){3}(/\d{1,2})?"))
             {
                 MessageBox.Show("有効なIPアドレスを入力してください", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
